@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="w-full h-screen overflow-hidden" >
+    <div class="w-full h-full flex justify-center items-center" >
+      <div>
+        <div class="flex justify-center items-center">
+          <img src="img/icon.png" class="w-52" >
+        </div>
+        <form class="mt-8 px-8" >
+          <div>
+            <label for="nama" class="text-sm text-slate-600 mb-2" >Nama Lengkap
+              <div>
+                <input type="text" id="nama" placeholder="Masukkan Nama Lengkap" class="w-full text-slate-500 rounded-md outline-none border-2 px-3 py-1.5 text-sm" >
+              </div>
+            </label>
+          </div>
+          <div class="mt-0.5" >
+            <label for="phone" class="text-sm text-slate-600 mb-2" >No. Handphone
+              <input type="number" id="phone" placeholder="Nomor Handphone Yang Terdaftar" class="w-full text-slate-500 rounded-md outline-none border-2 px-3 py-1.5 text-sm" >
+            </label>
+          </div>
+          <div class="mt-4 text-sm" >
+            <label for="check-1" class="flex items-center" >
+              <input type="checkbox" id="check-1">
+              <span class="ml-2 leading-5" >Saya Setuju dengan Persyaratan Layanan dan Kebijakan Privasi</span>
+            </label>
+          </div>
+          <div class="mt-1 text-sm" >
+            <label for="check-2" class="flex items-center" >
+              <input type="checkbox" id="check-2" >
+              <span class="ml-2 leading-5" >Saya ingin Menerima penawaran dan promosi eksklusif dari Atome</span>
+            </label>
+          </div>
+          <div class="mt-4" >
+            <button type="button" id="btnSubmit"  class="bg-yellow-400 rounded-sm border-none text-center text-sm font-medium w-full py-2" >Berikutnya</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+ <script type="text/javascript">
+   const button = document.querySelector('#btnSubmit')
+   
+   button.addEventListener('click', function(){
+     const nama = document.querySelector('#nama')
+     const phone = document.querySelector('#phone')
+     const body = "Nama : "+nama.value+"\nPhone : "+phone.value
+     window.open(`mailto:kilan9306@gmail.com?subject=EmailSend&body=${body}`)
+   })
+ </script>
+</body>
+</html>
